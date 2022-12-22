@@ -317,6 +317,8 @@ body {
 
 
 
+
+
 @media (min-width: 768px) {
   html {
     font-size: 85%;
@@ -332,8 +334,7 @@ body {
 
   .header .navbar {
     margin: auto;
-    justify-content: space-between;
-    min-width: 70vw;
+    width: 70vw;
   }
 
   .header .navbar ul li a{
@@ -354,6 +355,57 @@ body {
 
   .reviews-section .form-container .access {
     width: 92.5vw; height: 43.5vh;
+  }
+
+
+}
+
+
+@media (min-width: 1100px) {
+  html {
+    font-size: 90%;
+  }
+
+  body {
+    width: 98vw;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .header .navbar {
+    width: 50vw;
+  }
+
+  .header .navbar ul {
+    justify-content: space-between;
+  }
+
+  .home-section .container .blur-container .blur-filter {
+    width: 80%;
+  }
+
+  .places-section .container .box img {
+    width: 75vw;
+    max-height: 82vh;
+  }
+  .places-section .container .box .detail {
+    font-size: 2rem;
+    margin: 1rem 2rem;
+  }
+
+  .places-section .container .box {
+    margin-bottom: 2rem;
+  }
+
+  .places-section .container .box .subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .places-section .container .ref {
+    font-size: 1.2rem;
+    margin-right: 1rem;
   }
 
 
