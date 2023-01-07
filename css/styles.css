@@ -134,11 +134,12 @@ body {
 
 .home-section .container {
   max-width: 100%;
-  height: 80vh;
-  padding-top: 2.4rem;
+  height: 100vh;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
+  grid-template-rows: 13rem;
+  padding-top: 3.2rem;
 }
 
 .home-section .container .subtitle {
@@ -146,13 +147,13 @@ body {
   font-size: 4.5rem;
   text-align: center;
   margin: auto;
-  height: 45px;
 }
 
 .home-section .container .blur-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%; height: 100%;
 }
 
@@ -161,7 +162,7 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 96vw; height: 51vh;
+  top: 0; bottom: 0; left: 0; right: 0;
   background: rgba(255, 255, 255, .5);
   backdrop-filter: blur(4px);
   border-radius: 5px;
@@ -189,6 +190,10 @@ body {
   border: 1px solid var(--dark);
 }
 
+.home-section .container img {
+  height: 70vh;
+}
+
 /* history section */
 
 .history-section .container,
@@ -198,10 +203,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.history-section .container .subtitle {
-  margin-bottom: 2rem;
 }
 
 .container .detail {
@@ -229,11 +230,19 @@ body {
   align-items: center;
 }
 
+/* surrounding-section */
+
 .surrounding-section {
   padding-top: 4rem;
 }
 
-.surrounding-section h3 {
+.surrounding-section .container h1 {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.surrounding-section h4 {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -242,6 +251,10 @@ body {
 
 .reviews-section {
   padding: 4rem 1rem 2rem 1rem;
+}
+
+.reviews-section .subtitle {
+  text-align: center;
 }
 
 .reviews-section .container {
@@ -287,6 +300,13 @@ body {
   flex-direction: column;
 }
 
+.reviews-section .form-container {
+  position: relative;
+  height: 338px;
+  z-index: 10;
+  margin-bottom: 1rem;
+}
+
 .reviews-section .form-container form input,
 .reviews-section .form-container form textarea {
   padding: .5rem;
@@ -307,11 +327,12 @@ body {
   display: flex;
   position: absolute;
   font-size: 4rem;
-  width: 91vw; height: 49.5vh;
   background: rgba(255, 255, 255, .8);
   text-align: center;
   align-items: center;
   border-radius: 5px;
+  z-index: 20;
+  top: 0; bottom: 0; left: 0; right: 0;
 }
 
 
@@ -340,7 +361,7 @@ body {
   }
 
   .header .navbar ul li a{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .home-section .container .subtitle {
@@ -361,11 +382,23 @@ body {
     font-size: 1.5rem;
   }
 
-  .reviews-section .form-container .access {
-    width: 92.5vw; height: 43.5vh;
+  .reviews-section .form-container form {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
   }
 
 
+}
+
+
+@media (min-width: 992px) {
+  .home-section {
+    height: 100vh;
+  }
+
+  .home-section .container {
+    grid-template-rows: 8rem;
+  }
 }
 
 
@@ -383,7 +416,7 @@ body {
   }
 
   .header .navbar {
-    width: 50vw;
+    width: 35vw;
   }
 
   .header .navbar ul {
@@ -391,8 +424,7 @@ body {
   }
 
   .home-section .container .blur-container .blur-filter {
-    width: 93%;
-    min-height: 54vh;
+    transform: scale(97%, 91.5%);
   }
 
   .footer-container .box {
