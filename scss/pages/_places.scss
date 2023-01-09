@@ -1,0 +1,37 @@
+.places-section .container .box,
+.surrounding-section .container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+	.subtitle {
+  margin-bottom: 1rem;
+	}
+}
+
+.places-section .container .subtitle {
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 1100px) {
+	.places-section {
+		.container {
+			.box {
+				img {
+					width: 75vw;
+					max-height: 82vh;
+				}
+
+				.detail {
+					margin: 1rem 2rem;
+				}
+
+			}
+			.ref {
+				font-size: 1.2rem;
+				margin-right: 1rem;
+			}
+		}
+	} 
+	
+}

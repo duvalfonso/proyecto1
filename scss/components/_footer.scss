@@ -1,0 +1,46 @@
+.footer-container {
+	width: 100%;
+	min-height: 35vh;
+	bottom: 5rem;
+	background: #8d969d;
+	border-bottom: 2rem solid #343a40;
+	display: flex;
+	padding: .8rem;
+	justify-content: space-around;
+	flex-direction: column;
+
+	.box {
+		text-align: center;
+		width: 100%;
+		margin: 2rem 0;
+		
+		
+		h4 {
+			font-size: 1.7rem;
+			margin-bottom: 1.2rem;
+		}
+
+		.detail {
+			font-size: 1rem;
+		}
+	}
+}
+
+
+@media (min-width: 768px) {
+	.footer-container {
+    min-height: 27vh;
+    flex-direction: initial;
+
+		.box {
+			.detail {
+				font-size: 1.2rem;
+			}
+
+			h4 {
+				margin-bottom: 1.2rem;
+				font-size: 1.5rem;
+			}
+		}
+  }
+}

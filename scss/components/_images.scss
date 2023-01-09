@@ -1,0 +1,11 @@
+.home-section .container img,
+.history-section .container img,
+.places-section .container img,
+.surrounding-section .container img {
+  max-width: 96%;
+  min-height: 50vh;
+  object-fit: cover;
+  border-radius: 5px;
+  padding: .4rem;
+  border: 1px solid $dark;
+}
