@@ -21,11 +21,11 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--white);
+  background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--dark);
+  background: #16191b;
 }
 
 section {
@@ -132,24 +132,54 @@ section {
   margin: 2rem 0;
 }
 .footer-container .box h4 {
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin-bottom: 1.2rem;
 }
-.footer-container .box .detail {
-  font-size: 1rem;
+.footer-container .box ul li {
+  list-style: none;
+  margin-bottom: 0.3rem;
+}
+.footer-container .box ul li a {
+  font-size: 1.7rem;
+  color: #16191b;
+}
+.footer-container .box:nth-child(2) ul li a {
+  margin-right: 1rem;
+  font-size: 2.3rem;
+}
+.footer-container .credit {
+  text-align: center;
+}
+.footer-container .credit span {
+  color: #0a7e5c;
 }
 
 @media (min-width: 768px) {
   .footer-container {
     min-height: 27vh;
     flex-direction: initial;
+    flex-wrap: wrap;
+  }
+  .footer-container .box {
+    flex: 0 0 20rem;
   }
   .footer-container .box .detail {
     font-size: 1.2rem;
   }
   .footer-container .box h4 {
     margin-bottom: 1.2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer-container .box {
+    flex: 0 0 35rem;
+  }
+  .footer-container .box ul li a {
+    font-size: 1.4rem;
+  }
+  .credit {
+    font-size: 1rem;
   }
 }
 .container .detail {
@@ -353,6 +383,10 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+}
+.reviews-section .form-container .access:hover {
+  opacity: 1;
 }
 
 .reviews-section .form-container form input,
