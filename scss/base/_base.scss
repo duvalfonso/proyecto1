@@ -26,13 +26,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $dark;
+  background: $grey-dark;
+  border-radius: 5px;
 }
 
 section {
   width: 96vw;
   margin: auto;
-  background-color: #f7f7f7;
+  background-color: #fbfbfb;
 }
 
 .subtitle {

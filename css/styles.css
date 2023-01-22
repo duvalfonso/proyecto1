@@ -25,13 +25,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #16191b;
+  background: #343a40;
+  border-radius: 5px;
 }
 
 section {
   width: 96vw;
   margin: auto;
-  background-color: #f7f7f7;
+  background-color: #fbfbfb;
 }
 
 .subtitle {
@@ -73,7 +74,6 @@ section {
   font-weight: bolder;
   text-align: center;
 }
-
 .logo:hover {
   color: #16191b;
 }
@@ -105,10 +105,12 @@ section {
     justify-content: space-between;
   }
   .header .logo {
-    margin: 0 auto;
+    margin: 0;
+    position: relative;
+    left: 0;
   }
   .header .navbar {
-    margin: auto;
+    margin: 0;
     flex-grow: 0.1;
   }
   .header .navbar ul li a {
@@ -350,14 +352,15 @@ section {
   object-fit: cover;
 }
 .reviews-section .container .box h4 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   padding: 0.5rem 0;
   color: #ccc;
 }
 .reviews-section .container .box p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 1rem 0;
   color: #ccc;
+  text-transform: none;
 }
 .reviews-section .form-container {
   position: relative;
