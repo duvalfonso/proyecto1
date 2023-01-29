@@ -4,8 +4,3 @@ const navbarLinks = document.getElementsByClassName('navbar')[0]
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
-
-toggleButton.addEventListener('onscroll', () => {
-    navbarLinks.classList.toggle('active')
-
-})
