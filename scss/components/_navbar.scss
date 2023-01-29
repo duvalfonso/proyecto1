@@ -3,43 +3,69 @@
 	top: 0; left: 0; right: 0;
 	z-index: 1000;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	background: $green;
+	align-items: center;
+	background-color: $green;
 	padding: 0 3%;
 	box-shadow: $box-shadow;
 	height: 3.5rem;
-}
 
-.logo {
-	margin: auto;
-	font-size: 2rem;
-	color: $white;
-	font-weight: bolder;
-	text-align: center;
 
-	&:hover {
-		color: $dark;
-	}
-}
+	.logo {
+		font-size: 2rem;
+		color: $white;
+		font-weight: bolder;
+		text-align: center;
 
-.navbar {
-	display: flex;
-	justify-content: space-around;
-	flex-grow: .5;
-	
-	ul {
-		display: flex;
-		justify-content: space-between;
-		
-		li {
-			list-style: none;
+			&:hover {
+				color: $dark;
 		}
 	}
+
+	.toggle-button {
+		position: absolute;
+		top: .75rem;
+		right: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 21px;
+
+		.bar {
+			height: 3px;
+			width: 100%;
+			background-color: $white;
+			border-radius: 10px;
+		}
+	}
+
+	.navbar {
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 34px; right: 0; left: 0;
+	background: $green;
+	
+		ul {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		
+			li {
+			list-style: none;
+			text-align: center;
+			
+			&:hover {
+				background-color: $grey;
+			}
+			}
+		}
 	
 	a {
-		font-size: 1rem;
-		margin-left: 1rem;
+		display: block;
+		padding: .5rem 1rem;
+		font-size: 1.7rem;
 		color: $white;
 
 		&:hover {
@@ -47,12 +73,16 @@
 		}
 	}
 	
+	}
+	.navbar.active {
+		display: flex;
+	}
 }
 
 @media (min-width: 768px) {
 	.header {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 		
 		.logo {
 			margin: 0;
@@ -62,15 +92,40 @@
 
 		.navbar {
 			margin: 0;
-			flex-grow: .1;
+			top: 47.5px;
 			
 			ul {
 				li{
 					a{
-						font-size: 1.3rem;
+						font-size: 2.3rem;
 					}
 				}
 			}
 		}
   }
+}
+
+@media (min-width: 992px){
+	.header {
+
+		.toggle-button {
+			display: none;
+		}
+
+		.navbar{
+			position: initial;
+			display: flex;
+
+			ul {
+				flex-direction: row;
+				justify-content: end;
+
+				li {
+					a {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
 }

@@ -59,44 +59,70 @@ section {
   right: 0;
   z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: #a0d0ad;
+  align-items: center;
+  background-color: #a0d0ad;
   padding: 0 3%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   height: 3.5rem;
 }
-
-.logo {
-  margin: auto;
+.header .logo {
   font-size: 2rem;
   color: #fff;
   font-weight: bolder;
   text-align: center;
 }
-.logo:hover {
+.header .logo:hover {
   color: #16191b;
 }
-
-.navbar {
+.header .toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
   display: flex;
-  justify-content: space-around;
-  flex-grow: 0.5;
-}
-.navbar ul {
-  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
-.navbar ul li {
+.header .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.header .navbar {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 34px;
+  right: 0;
+  left: 0;
+  background: #a0d0ad;
+}
+.header .navbar ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header .navbar ul li {
   list-style: none;
+  text-align: center;
 }
-.navbar a {
-  font-size: 1rem;
-  margin-left: 1rem;
+.header .navbar ul li:hover {
+  background-color: #cad2c5;
+}
+.header .navbar a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1.7rem;
   color: #fff;
 }
-.navbar a:hover {
+.header .navbar a:hover {
   color: #16191b;
+}
+.header .navbar.active {
+  display: flex;
 }
 
 @media (min-width: 768px) {
@@ -111,10 +137,26 @@ section {
   }
   .header .navbar {
     margin: 0;
-    flex-grow: 0.1;
+    top: 47.5px;
   }
   .header .navbar ul li a {
-    font-size: 1.3rem;
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 992px) {
+  .header .toggle-button {
+    display: none;
+  }
+  .header .navbar {
+    position: initial;
+    display: flex;
+  }
+  .header .navbar ul {
+    flex-direction: row;
+    justify-content: end;
+  }
+  .header .navbar ul li a {
+    font-size: 2rem;
   }
 }
 .footer-container {
@@ -153,7 +195,7 @@ section {
   text-align: center;
 }
 .footer-container .credit span {
-  color: #0a7e5c;
+  color: #52796f;
 }
 
 @media (min-width: 768px) {
@@ -182,6 +224,11 @@ section {
   }
   .credit {
     font-size: 1rem;
+  }
+}
+@media (min-width: 1404px) {
+  .footer-container .box {
+    flex: 0 0 45%;
   }
 }
 .container .detail {
@@ -282,6 +329,7 @@ section {
   text-transform: none;
   text-align: end;
   align-self: flex-end;
+  font-size: 1.2rem;
 }
 
 .places-section .container .box,
@@ -326,6 +374,7 @@ section {
 }
 
 .reviews-section {
+  display: grid;
   padding: 4rem 1rem 2rem 1rem;
 }
 .reviews-section .subtitle {
@@ -343,7 +392,7 @@ section {
   box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   flex: 1 1 30rem;
-  background: #0a7e5c;
+  background: #52796f;
 }
 .reviews-section .container .box .user-photo {
   height: 6rem;
@@ -364,7 +413,7 @@ section {
 }
 .reviews-section .form-container {
   position: relative;
-  height: 338px;
+  min-height: 40vh;
   z-index: 10;
   margin-bottom: 1rem;
 }
@@ -416,6 +465,11 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
+  }
+}
+@media (min-width: 991px) {
+  .reviews-section .form-container {
+    min-height: 60vh;
   }
 }
 
